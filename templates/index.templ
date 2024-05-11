@@ -1,0 +1,14 @@
+package templates
+
+templ Index(sites map[string]bool) {
+    <html>
+    <head>
+        <link
+            rel="stylesheet"
+            href="/assets/css/bulma.min.css"
+        />
+    </head>
+
+    @Endpoints(sites)
+    </html>
+}

@@ -1,0 +1,19 @@
+package templates
+
+templ Endpoints(sites map[string]bool) {
+    <section class="section">
+    <ul>
+    for site, online := range sites{
+        <li>
+        if online {
+            <a href={ templ.SafeURL(site) }
+                class="has-text-success"
+            >{ site }</a>
+        } else {
+            <span class="has-text-danger">{ site }</span>
+        }
+        </li>
+    }
+    </ul>
+    </section>
+}
